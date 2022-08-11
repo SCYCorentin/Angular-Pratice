@@ -1,8 +1,21 @@
 <div>
-    <img [src]="User.photo" [alt]="User.firstName" />
-    <p>Nom: {{ User.name }}</p>
-    <p>Prénom: {{ User.firstName }}</p>
-    <p [hidden]="isHidden">Age: {{ User.age }}</p>
-    <button (click)="handleHide()" *ngIf="isHidden">Show Age</button>
-    <button (click)="handleHide()" *ngIf="!isHidden">Hide Age</button>
-  </div>
+<ul>
+  <li>Pomme de terre</li>
+  <li [ngStyle]="{backgroundColor: isThisIngredientVital ? 'red' : 'yellow'}">Raclette</li>
+  <li>Jambon</li>
+  <li>Cornichons</li>
+  <li [ngClass]="{'vital' : isThisIngredientVital}">Chou-fleur</li>
+</ul>
+<hr>
+<ul *ngIf="displayGuestList">
+  <li>Sarah</li>
+  <li>Lisa</li>
+  <li>Jordan</li>
+  <li>Scofield</li>
+  <li>Lincoln</li>
+  <li>T-Bag</li>
+</ul>
+<ul *ngFor="let song of songList">
+  <li>{{ song }}</li>
+</ul>
+</div>

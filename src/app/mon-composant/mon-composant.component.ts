@@ -8,19 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class MonComposantComponent implements OnInit {
 
   constructor() { }
+  title = 'Raclette Party';
 
-  User = {
-    name: 'Doe',
-    firstName: 'John',
-    age: 25,
-    quote: '',
-    photo: 'https://randomuser.me/api/portraits/lego/2.jpg',
-  };
-  isHidden: boolean = true;
-
+  isThisIngredientVital:boolean = true;
+  displayGuestList:boolean = false;
+  songList:string[] = ["Alejendro", "Ne me quitte pas", "Le temps est bon"];
   ngOnInit(): void {}
-
-  handleHide() {
-    this.isHidden = !this.isHidden;
-  }
 }
